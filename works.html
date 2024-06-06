@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시, Works</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Grandiflora+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gasoek+One&family=Grandiflora+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gasoek+One&family=Grandiflora+One&family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+
+
+    <style>
+        body{
+            background-color: #7b9acc;
+        }
+        nav{
+            text-align: center;
+            margin: 0 auto;
+        }
+        .d{
+            display: inline-block;
+        }
+        .name{
+            font-size: 100px;
+            font-style: normal;
+            display: inline-block;
+            padding: 20px;
+            font-family: "Gasoek One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            color: #FCEDDA;
+        }
+        .name:hover{
+            transform: rotate(60deg);
+        }
+        .name_explain{
+            font-size: 30px;
+            align-self: center;
+            font-family: "Grandiflora One", cursive;
+            font-weight: 400;
+            font-style: normal;
+            display: inline-block;
+            color: #FCEDDA;
+            visibility: hidden;
+        }
+        #home_gif{
+            margin: 0 auto;
+        }
+        
+        .content2{
+            text-align: center;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            width: 700px;
+            margin: 0 auto;
+        }
+        span{
+            display: inline-block;
+            font-size: 30px;
+            font-family: "Nanum Myeongjo", serif;
+            font-weight: 400;
+            font-style: normal;
+            margin-bottom: 10px;
+
+        }
+        #ex{
+            padding-top: 20px;
+            font-size: 20px;
+            align-self: center;
+            font-family: "Grandiflora One", cursive;
+            font-weight: 400;
+            font-style: normal;
+            color: #FCEDDA;     
+        }
+
+        a{
+            font-size: 20px;
+            font-family: "Grandiflora One", cursive;
+            font-weight: 400;
+            font-style: normal;
+            color: #FCEDDA;
+            padding: 50px;
+        }
+        .contentTitles{
+            font-size: 30px;
+            font-family: "Nanum Myeongjo", serif;
+            font-weight: 400;
+            font-style: normal;
+            color: #FCEDDA;
+            margin-bottom: 10px;
+        }
+        p{
+            font-size: 20px;
+            font-family: "Grandiflora One", cursive;
+            font-weight: 600;
+            font-style: normal;
+            color: #FCEDDA;  
+        }
+        summary{
+            font-size: 20px;
+            font-family: "Grandiflora One", cursive;
+            font-weight: 600;
+            font-style: normal;
+            color: #FCEDDA;  
+            margin-bottom: 10px;
+        }
+        .tagg{
+            border-radius: 17px;
+            background-color: rgb(255,255,255,0.5) ;
+            width: 100px;
+            margin: 0 auto;
+            color: darkblue;
+            font-family: "Nanum Myeongjo", serif;
+            font-weight: 400;
+            font-style: normal;
+            display: inline-block;
+            padding: 10px;
+        }
+        ul{
+            list-style: none;
+            font-size: 20px;
+            font-family: "Grandiflora One", cursive;
+            font-weight: 600;
+            font-style: normal;
+            color: #FCEDDA;
+              
+        }
+        #difi{
+            background-color: #FCEDDA; 
+            border-radius: 20px;
+            font-family: "Nanum Myeongjo", serif;
+            font-weight: 100;
+            font-style: normal;
+            color: #7b9acc;
+            font-size: 15px;
+            padding: 20px;
+            letter-spacing: 0.5px;
+            line-height: 19px;
+        }
+
+
+    </style>
+    <script>
+        var meanArr = document.getElementsByClassName("name_explain");
+        function meanshow(n){
+            var mean = meanArr.item(n);
+            mean.style.visibility = 'visible';
+            switch(n){
+                case 0:
+                document.body.style.backgroundColor = "#F95700";
+                    break;
+                case 2:
+                document.body.style.backgroundColor = "#A4193D";
+                    break;
+            }
+        }
+        function meangone(n){
+            var mean = meanArr.item(n);
+            mean.style.visibility = 'hidden';
+            document.body.style.backgroundColor = "#7b9acc";
+        }
+
+        function addList(){
+            var list = document.getElementById("comments");
+            var addValue = document.getElementById("add").value;
+            if(addValue == null || addValue =="")
+                return;
+            var liObj = document.createElement("li");
+            liObj.innerHTML = addValue;
+            list.appendChild(liObj);
+        }
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var canvas = document.getElementById("canvas1");
+            var context = canvas.getContext("2d");
+            context.beginPath();
+            context.strokeStyle = "darkblue";
+            context.arc(300, 125, 95, 0, 2 * Math.PI, false);
+            context.stroke();
+            context.beginPath();
+            context.arc(265, 100, 10, 0, 2 * Math.PI, false);
+            context.stroke();
+            context.beginPath();
+            context.arc(335, 100, 10, 0, 2 * Math.PI, false);
+            context.stroke();
+            context.beginPath();
+            context.arc(300, 150, 10, 0,  Math.PI, false);
+            context.stroke();
+            context.beginPath();
+
+            context.fillStyle = "darkblue";
+            context.textAlign = "center";
+            context.font = "30px Gasoek One"
+            context.fillText("Sihyeun's Works", 300, 270);
+
+
+        });
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="d" onmouseover="meanshow(0)" onmouseout="meangone(0)" onclick="document.location.href='home.html'">
+            <div class="name" >박</div>
+            <div class="name_explain">밀양 박<br>About me</div>
+           </div>
+           <div class="d" onmouseover="meanshow(1)" onmouseout="meangone(1)" onclick="document.location.href='works.html'">
+            <div class="name">시</div>
+            <div class="name_explain">베풀 시<br>Works</div>
+           </div>
+           <div class="d" onmouseover="meanshow(2)" onmouseout="meangone(2)" onclick="document.location.href='plan.html'">
+            <div class="name">현</div>
+            <div class="name_explain">밝을 현<br>Plan</div>
+           </div>
+    </nav>
+
+    <div class="content2">
+        <canvas id="canvas1" width="600px" height="300px" style="background-color: aliceblue;"></canvas>
+        <p>이 때까지 진행한 프로젝트들을 소개합니다.</p>
+    </div>
+    
+    <div class="content2">
+        <h3 class="contentTitles">뜨개랑</h3>
+        <hr style="margin-bottom: 30px;" color: #FCEDDA;>
+        <img src="drawable/tteu02.jpg" width="600px" height="300px">
+        <img src="drawable/tteu01.png" width="196px" height="120px">
+        <img src="drawable/tteu03.jpg" width="196px" height="120px">
+        <img src="drawable/tteu04.png" width="196px" height="120px">
+
+        <p>뜨개랑은 뜨개인들을 위한 뜨개질 특화 플랫폼이다. <br>
+            뜨개 도안 공유, 뜨개 커뮤니티 등의 기능을 제공하여<br>
+            뜨개 재유행을 선도하는 2030세대를 타깃으로 기획되었다.<br>
+            2024 창업 동아리의 아이템으로 연말까지 개발을 완료할 계획이다.</p>
+
+        <div class="tagg">기획 담당</div>
+        <div class="tagg">기획 완료</div>
+        <div class="tagg">웹페이지</div>
+        <div class="tagg">프론트엔드</div>
+        
+    </div>
+    
+    <div class="content2">
+        <h3 class="contentTitles">공주대학교 행정 어플리케이션</h3>
+        <hr style="margin-bottom: 30px; color: #FCEDDA;" >
+        
+        <img src="drawable/admin01.PNG" width="600px" height="300px">
+        <br>
+        <img src="drawable/admin02.PNG" width="196px" height="120px">
+        <img src="drawable/admin03.PNG" width="196px" height="120px">
+        <img src="drawable/admin04.PNG" width="196px" height="120px">
+
+        <p>공주대학교 행정 앱은 행정 업무를 효율적으로 하게 해준다. <br>
+            민원 접수 게시판, 접수 현황, 공지사항 등의 기능을 제공하여<br>
+            민원 제시인과 처리 담당자 모두가 편리할 수 있도록 개발되었다.<br></p>
+
+        <div class="tagg">기획 / 디자인</div>
+        <div class="tagg">개발 완료</div>
+        <div class="tagg">안드로이드 앱</div>
+        <div class="tagg">프론트엔드</div>
+        
+    </div>
+    
+    <div class="content2">
+        <h3 class="contentTitles">내가 Primitive에 들어가면 어떨까?</h3>
+        <hr style="margin-bottom: 30px; color: #FCEDDA;">
+        
+        <img src="drawable/pbti02.png" width="600px" height="300px">
+        <br>
+        <img src="drawable/pbti01.png" width="196px" height="120px">
+        <img src="drawable/pbti03.png" width="196px" height="120px">
+        <img src="drawable/pbti04.png" width="196px" height="120px">
+
+        <p>내가 Primitive에 들어가면 어떨까?는 간단한 성격 유형 검사이다. <br>
+           2024년도 신입생을 모집하기 위해 홍보용으로 제작되었으며<br>
+            심리테스트를 진행하면 동아리원 12명의 유형으로 분류된다.<br></p>
+
+        <div class="tagg">기획 / 디자인</div>
+        <div class="tagg">개발 완료</div>
+        <div class="tagg">웹사이트</div>
+        <div class="tagg">프론트엔드</div>
+        
+    </div>
+
+    <div class="content2">
+        <h3 class="contentTitles">택시 타투</h3>
+        <hr style="margin-bottom: 30px; color: #FCEDDA;">
+        
+        <img src="drawable/taxi03.PNG" width="600px" height="300px">
+        <br>
+        <img src="drawable/taxi01.PNG" width="196px" height="120px">
+        <img src="drawable/taxi02.PNG" width="196px" height="120px">
+        <img src="drawable/taxi04.PNG" width="196px" height="120px">
+
+        <p>택시 타투는 쾌적한 택시 합승을 위해 동승자를 추천하는 프로그램이다. <br>
+            온도, 원하는 분위기 등을 기반으로 코사인 유사도를 도출해 동승자를 추천한다.<br>
+            창의적 공학 설계 수업에서 시작된 프로젝트로, 특허 출원을 완료했다.<br>
+            </p>
+
+        <div class="tagg">기획 / 디자인</div>
+        <div class="tagg">아이디어</div>
+        <div class="tagg">특허 출원</div>
+        
+    </div>
+
+    <div class="content2">
+        <h3 class="contentTitles">업데이트 예정</h3>
+        <hr style="margin-bottom: 30px; color: #FCEDDA;">
+        <img src="drawable/load.gif" width="600px">
+        <p>프로젝트에 관한 코멘트를 남겨주세요!</p>
+        <input type="text" id="add" size="30">
+        <input type="button" value="작성" onclick="addList()">
+        <ul id="comments">
+            <li>예시: 좋아요~💖</li>
+        </ul>
+    </div>
+
+    <div class="content2">
+        <h3 class="contentTitles">어려웠던 점</h3>
+        <p id="difi">
+            2023년 2학기에 자바 프로그래밍2를 수강하며 모바일 앱을 만드는 경험을 했다. <br>
+            공주대학교 민원을 총괄하는 기능(민원 접수, 처리, 공지사항 공지)을 가진 앱을 <br>
+            만드는 프로젝트였다.  주로 레이아웃 디자인과 프론트를 담당하였다. 특히 로그인 <br>
+            및 회원 가입 화면을 주로 만들었는데, 솔직히 안드로이드 스튜디오에 대한 이해도가 <br>
+            굉장히 낮아서 모든 것이 어려웠다. fragment intent를 하며 값을 넘겨줘야 하는<br>
+            부분을 모르겠어서 공부해보니 putExtra를 이용하여 값을 넘겨주었다.<br>
+            <br>
+            진로가 개발이 중심이 아니기 때문에 프로젝트를 진행하며 보고서를 쓰는 경험에서<br>
+            어려웠던 점을 서술해보겠다. 2024년 초 공주대학교 새싹 창업 캠프에 참가하였다.<br>
+            2박 3일 간 진행되는 과정에서 창업 아이디어를 도출하고 창업 계획서, 발표까지<br>
+            마무리를 해야하는 상황이었다. 선정한 아이디어는 뜨개질 플랫폼인 뜨개랑이었는데<br>
+            대략적인 구성을 하고 캠프에 참가했음에도 불구하고 부족한 시간에 많은 애를 겪었다.<br>
+            특히 시장 조사를 하는 부분에서, 뜨개질 분야 자체가 마이너하다 보니 관련된 <br>
+            양질의 자료(통계 자료 혹은 논문 등)가 많지 않았다. <br>
+            이를 해결하기 위해 국내 시장 뿐만 아니라 뜨개질의 주류 문화인 타국의 플랫폼(Ravely), <br>
+            자료들을 찾아보고 번역해가면서 시장 조사를 마칠 수 있었다. 또한 타국의 서비스가<br>
+            아니라 주요 분야가 아니더라도 비슷한 기능을 제공하는 서비스(스테디오)를 <br>
+            참고해가며 문제를 해결할 수 있었다.<br>
+            <br>
+            과제를 진행하며 어려웠던 점을 서술하기 위해 고민을 많이 해보았는데, <br>
+            특히 개발을 하며 어려웠던 점이 없었던 것 같아 당황스러웠다. 이때까지 딱히 고민을 하지 않고<br>
+            개발을 해왔던 것 같은데, 하나도 발전하지 못 한 것 같다는 생각이 든다. <br>
+            <br>
+            앞으로 개발 경험을 쌓아가며서 어렵다 느끼는 것들에 많은 도전을 하고, <br>
+            좌절하게 되더라도 많은 공부를 해가면서 어려움을 극복해 나가는 경험을 하고 싶다.
+        </p>
+    </div>
+   
+</body>
+</html>

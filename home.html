@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박, About Me</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Grandiflora+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gasoek+One&family=Grandiflora+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gasoek+One&family=Grandiflora+One&family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+
+
+    <style>
+        body{
+            background-color: #F95700;
+        }
+        nav{
+            text-align: center;
+            margin: 0 auto;
+        }
+        .d{
+            display: inline-block;
+        }
+        .name{
+            font-size: 100px;
+            font-style: normal;
+            display: inline-block;
+            padding: 20px;
+            font-family: "Gasoek One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            color: #FCEDDA;
+            
+        }
+        .name:hover{
+            transform: rotate(60deg);
+        }
+        .name_explain{
+            font-size: 30px;
+            align-self: center;
+            font-family: "Grandiflora One", cursive;
+            font-weight: 600;
+            font-style: normal;
+            display: inline-block;
+            color: #FCEDDA;
+            visibility: hidden;
+            
+        }
+        #home_gif{
+            margin: 0 auto;
+        }
+        .content2{
+            text-align: center;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            width: 700px;
+            margin: 0 auto;
+        }
+        span{
+            display: inline-block;
+            font-size: 30px;
+            font-family: "Nanum Myeongjo", serif;
+            font-weight: 400;
+            font-style: normal;
+            margin-bottom: 10px;
+
+        }
+        #ex{
+            padding-top: 20px;
+            font-size: 20px;
+            align-self: center;
+            font-family: "Grandiflora One", cursive;
+            font-weight: 600;
+            font-style: normal;
+            color: #FCEDDA;     
+        }
+
+        a{
+            font-size: 20px;
+            font-family: "Grandiflora One", cursive;
+            font-weight: 400;
+            font-style: normal;
+            color: #FCEDDA;
+            padding: 50px;
+        }
+        .contentTitles{
+            font-size: 30px;
+            font-family: "Nanum Myeongjo", serif;
+            font-weight: 400;
+            font-style: normal;
+            margin-bottom: 10px;
+            color: #FCEDDA;
+
+        }
+        p{
+            font-size: 20px;
+            font-family: "Grandiflora One", cursive;
+            font-weight: 600;
+            font-style: normal;
+            color: #FCEDDA;  
+            width: 700px;
+        }
+        summary{
+            font-size: 20px;
+            font-family: "Grandiflora One", cursive;
+            font-weight: 400;
+            font-style: normal;
+            color: #FCEDDA;  
+            margin-bottom: 10px;
+        }
+        #growContainer{
+            text-align: center;
+            text-align: center;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            width: 700px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .growZ{
+            position: absolute;
+            border-radius: 30px;   
+            color: rgb(1, 1, 1, 0.5);
+            text-align: center;
+            width: 700px;
+            margin: 0 auto;
+            border: #F95700 solid 5px;
+        }
+        #z1{
+            z-index: 1;
+            transform: translate(-53%, 0%);
+        }
+        #z2{
+            z-index: 2;
+            transform: translate(-50.25%, 7%);
+
+        }
+        #z3{
+            z-index: 3;
+            transform: translate(-47%, 14%);
+            opacity: 1;
+        }
+        #z1:hover{
+            z-index: 4;
+        }
+        #z2:hover{
+            z-index: 4;
+        }
+        #z3:hover{
+            z-index: 4;
+        }
+
+    </style>
+    <script>
+        var meanArr = document.getElementsByClassName("name_explain");
+        function meanshow(n){
+            var mean = meanArr.item(n);
+            mean.style.visibility = 'visible';
+            switch(n){
+                case 1:
+                document.body.style.backgroundColor = "#7b9acc";
+                    break;
+                case 2:
+                document.body.style.backgroundColor = "#A4193D";
+                    break;
+            }
+        }
+        function meangone(n){
+            var mean = meanArr.item(n);
+            mean.style.visibility = 'hidden';
+            document.body.style.backgroundColor = "#F95700";
+        }
+
+        var files = ["drawable/html.png",
+        "drawable/javaLogo.png", "drawable/androidLogo.PNG",
+        "drawable/CLogo.png", "drawable/CPPLogo.jpeg",
+        "drawable/PythonLogo.png", "drawable/RLogo.png"];
+        var imgs = new Array();
+        for(var i = 0; i<files.length; i++){
+            imgs[i] = new Image();
+            imgs[i].src = files[i];   
+        }
+        var next = 1;
+        function change(img){
+            img.src = imgs[next].src;
+            next++;
+            next %= imgs.length;
+        }
+        
+    </script>
+    
+</head>
+<body>
+     <nav>
+        <div class="d" onmouseover="meanshow(0)" onmouseout="meangone(0)" onclick="document.location.href='home.html'">
+            <div class="name" >박</div>
+            <div class="name_explain">밀양 박<br>About me</div>
+           </div>
+           <div class="d" onmouseover="meanshow(1)" onmouseout="meangone(1)" onclick="document.location.href='works.html'">
+            <div class="name">시</div>
+            <div class="name_explain">베풀 시<br>Works</div>
+           </div>
+           <div class="d" onmouseover="meanshow(2)" onmouseout="meangone(2)" onclick="document.location.href='plan.html'">
+            <div class="name">현</div>
+            <div class="name_explain">밝을 현<br>Plan</div>
+           </div>
+    </nav>
+    <div class="content2">
+        <img src="drawable/orange_aes.gif"><br>
+        <p id="ex"><span>"밝게 베풀어라"</span><br>사회적 약자를 배려하는 아이디어에 관심이 많은 박시현의 포트폴리오입니다.</p>
+        <a href="resource/2024 이력서 박시현.docx" download>이력서 다운 받기</a><br>
+        <p style="margin-top: 100px;">🎵 Title : 큰집 18층으로 떠나는 여행 by 배달의민족<br></p>
+        <audio src="resource/backmusic.mp3" controls autoplay loop>
+            브라우저가 audio 태그를 지원하지 않습니다.<br>
+            ✔ Music provided by 셀바이뮤직<br>
+            🎵 Title : 큰집 18층으로 떠나는 여행 by 배달의민족<br>
+            Shttps://sellbuymusic.com/md/macwcxk-uczknzw
+        </audio>
+    </div>
+
+
+    <div class="content2">
+        <h3 class="contentTitles">역량</h3>
+        <img src="drawable/html.png" alt="."
+        width="400" height="250"
+        style="background-color: white;"
+        onclick="change(this)">
+        <p>사진을 클릭해 넘겨보세요</p>
+    </div>
+
+    <div class="content2">
+        <h3 class="contentTitles">성장 과정</h3>
+        <img src="drawable/grow1.png" class="growZ" id="z1" >
+        <img src="drawable/grow2.png" class="growZ" id="z2" ">
+        <img src="drawable/grow3.png" class="growZ" id="z3"">
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br>
+
+    <div id="growContainer">
+        <h3 class="contentTitles">사회 이슈</h3>
+        <p>디지털 소외 계층들이 현실 세상에서도 소외되고 있다.<br>
+            개발자를 꿈꾸고 있는 학생으로서 앞으로 <br>고도화되어갈 디지털 세상에서<br>
+            소외되는 사람이 없을 수 있는 기술을 만들고 싶다.
+        </p>
+        <p><br>디지털 소외 계층 관련 기사 - 야구</p>
+        <a href="https://www.segye.com/newsView/20231110512522" target='_blank' >
+            <img src="drawable/baseball_news02.png" style="width: 500px;" title="기사로 바로 가기">
+        </a>
+        <p>인터넷에서의 예매가 주가 되면서 디지털 소외계층들은 <br>
+            예매 자체를 하지 못하는 일이 빈번하게 발생하고 있다.<br>
+            
+        </p>
+
+
+        <p><br>디지털 소외 계층 관련 기사 - 택시</p>
+        <a href="https://www.kgnews.co.kr/news/article.html?no=722605" target='_blank' >
+            <img src="drawable/taxi_news01.png" style="width: 500px;"title="기사로 바로 가기">
+        </a>
+        <p>카카오택시의 출현 이후 택시 승강장에서는 택시가 멈추지 않는다. <br>
+            편리함만을 위한 디지털화는 소외 계층에서 또다른 불편일 수도 있다.  
+        </p>
+        <br>
+        <details>
+            <summary>야구 - 해결 방안</summary>
+            <a href="https://sports.donga.com/sports/article/all/20240425/124658390/1" target='_blank' >
+                <img src="drawable/baseball02.png" style="width: 500px;" title="기사로 바로 가기">
+            </a>
+            <p>롯데 자이언츠 구단은 10개 구단 중 처음으로 디지털 소외계층을 위한 <br>
+                현장 예매 창구를 오픈했다. 온라인 예매 전 현장 예매 전용 좌석을 <br>
+                미리 지정해두는 방식이다. 이를 통해 디지털 소외를 완화했다.<br>
+                수 있는 건강한 야구 문화가 되길 희망한다.
+            </p>
+        </details>
+        <details>
+            <summary>택시 - 해결 방안</summary>
+            
+            <p>택시의 경우에는 디지털 소외 계층을 위한 획기적인 방안이 나오고 있지 않다. <br>
+                소외 계층을 위한 교육이나 쉽게 접근 가능한 UI/UX가 필요하다고 생각한다.
+            </p>
+        </details>
+            
+        </p>
+        
+        
+    </div>
+    
+    
+   
+</body>
+</html>

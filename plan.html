@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>현, plan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Grandiflora+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gasoek+One&family=Grandiflora+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gasoek+One&family=Grandiflora+One&family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+
+
+    <style>
+        body{
+            background-color: #A4193D;
+            font-family: "Grandiflora One", cursive;
+            font-weight: 400;
+            font-style: normal;
+            color: #FCEDDA;
+        }
+        nav{
+            text-align: center;
+            margin: 0 auto;
+        }
+        .d{
+            display: inline-block;
+        }
+        .name{
+            font-size: 100px;
+            font-style: normal;
+            display: inline-block;
+            padding: 20px;
+            font-family: "Gasoek One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            color: #FCEDDA;
+        }
+        .name:hover{
+            transform: rotate(60deg);
+        }
+        .name_explain{
+            font-size: 30px;
+            align-self: center;
+            font-family: "Grandiflora One", cursive;
+            font-weight: 400;
+            font-style: normal;
+            display: inline-block;
+            color: #FCEDDA;
+            visibility: hidden;
+        }
+        #home_gif{
+            margin: 0 auto;
+        }
+        
+        .content2{
+            text-align: center;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            width: 700px;
+            margin: 0 auto;
+        }
+        span{
+            display: inline-block;
+            font-size: 30px;
+            font-family: "Nanum Myeongjo", serif;
+            font-weight: 400;
+            font-style: normal;
+            margin-bottom: 10px;
+
+        }
+        #ex{
+            padding-top: 20px;
+            font-size: 20px;
+            align-self: center;
+            font-family: "Grandiflora One", cursive;
+            font-weight: 400;
+            font-style: normal;
+            color: #FCEDDA;     
+        }
+
+        a{
+            font-size: 20px;
+            font-family: "Grandiflora One", cursive;
+            font-weight: 400;
+            font-style: normal;
+            color: #FCEDDA;
+            padding: 50px;
+        }
+        .contentTitles{
+            font-size: 30px;
+            font-family: "Nanum Myeongjo", serif;
+            font-weight: 400;
+            font-style: normal;
+            color: #FCEDDA;
+            margin-bottom: 10px;
+        }
+        p{
+            font-size: 20px;
+            font-family: "Grandiflora One", cursive;
+            font-weight: 600;
+            font-style: normal;
+            color: #FCEDDA;  
+        }
+        summary{
+            font-size: 20px;
+            font-family: "Grandiflora One", cursive;
+            font-weight: 400;
+            font-style: normal;
+            color: #FCEDDA;  
+            margin-bottom: 10px;
+        }
+
+        table{
+            border-collapse: collapse;
+            margin: 0 auto;
+        }
+        td, th{
+            text-align: left;
+            padding: 5px;
+            height: 15px;
+            width: 150px;
+        }
+        .tdN{
+            width: 350px;
+        }
+        .backWhite{
+            border-radius: 17px;
+            background-color: rgb(255,255,255,0.7) ;
+            margin: 0 auto;
+            color: darkred;
+            font-family: "Nanum Myeongjo", serif;
+            font-weight: 400;
+            font-style: normal;
+            display: inline-block;
+            padding: 20px;
+        }
+
+        .div_exp{
+            line-height: 50px;
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            justify-content: center;
+            align-items: center;
+            background: rgb(0, 0, 0, 0.5);
+            /* opacity: 0; */
+            transition: opacity 0.2s;
+        }
+        #ktDetail{
+            background-color: #FCEDDA; 
+            border-radius: 20px;
+            color: black;
+            font-family: "Nanum Myeongjo", serif;
+            font-weight: 100;
+            font-style: normal;
+            color: #A4193D;
+            font-size: 15px;
+            padding: 20px;
+            letter-spacing: 0.5px;
+            line-height: 19px;
+        }
+
+    </style>
+    <script>
+        var meanArr = document.getElementsByClassName("name_explain");
+        function meanshow(n){
+            var mean = meanArr.item(n);
+            mean.style.visibility = 'visible';
+            switch(n){
+                case 0:
+                document.body.style.backgroundColor = "#F95700";
+                    break;
+                case 1:
+                document.body.style.backgroundColor = "#7b9acc";
+                    break;
+            }
+        }
+        function meangone(n){
+            var mean = meanArr.item(n);
+            mean.style.visibility = 'hidden';
+            document.body.style.backgroundColor = "#A4193D";
+        }
+
+    </script>
+
+    <script>
+        var abcExplai = document.getElementById("abcExplain");
+        abcExplain.innerHTML = "<p><br><br></p>"
+        function showEx(num){
+            if(num == 0){
+                abcExplain.innerHTML = "<p>사물인터넷(IoT, Internet of Things)은 센서(및 기타 기술)가 장착된 <br>"
+                +"연결된 오브젝트와 장치(일명 '사물')로 이루어진 네트워크를 뜻한다.</p>"
+            } else if(num == 1){
+                abcExplain.innerHTML = "<p>클라우드(Cloud)란, 광대한 네트워크를 통하여 접근할 수 있는 가상화된 서버와<br>"
+                +"서버에서 작동하는 프로그램과 데이터베이스를 제공하는 IT 환경을 의미한다.</p>"
+            }else if(num == 2){
+                abcExplain.innerHTML = "<p>인공 지능(AI)은 학습, 창조, 이미지 인식과 같이 주로 인간 지능에 <br>"
+                    +" 연결된 인지 문제를 해결하는 데 주력하는 컴퓨터 공학 분야이다.</p>"
+            }else if(num == 3){
+                abcExplain.innerHTML = "<p>빅데이터(Big Data)란 거대한 규모(volume), 빠른 속도(velocity), <br>"
+                    +"높은 다양성(variety), 즉 3V를 특징으로 하는 데이터이다. </p>"
+            }
+        }
+        function goneEx(){
+            abcExplain.innerHTML = "<p><br><br></p>";
+        }
+
+    </script>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+            const DDay = document.getElementById("DDay");
+            
+            function find_day() {
+                const dday = new Date(2025, 11, 18);  // 디데이 설정 (월은 0부터 시작하므로 11은 12월)
+                const today = new Date();  // 현재 시간
+
+                const day_gap = dday - today;  // 디데이까지 남은 밀리세컨드 값
+
+                const day = Math.floor(day_gap / (1000 * 60 * 60 * 24));  // 남은 일수 계산
+                const hour = Math.floor((day_gap / (1000 * 60 * 60)) % 24);  // 남은 시간 계산
+                const min = Math.floor((day_gap / (1000 * 60)) % 60);  // 남은 분 계산
+                const sec = Math.floor((day_gap / 1000) % 60);  // 남은 초 계산
+
+                DDay.innerText = "✨ D - "+day+"일 "+hour+"시간 "+min+"분 "+sec+"초 ✨";
+            }
+
+            find_day();
+            setInterval(find_day, 1000);
+        });</script>
+</head>
+<body>
+    <nav>
+        <div class="d" onmouseover="meanshow(0)" onmouseout="meangone(0)" onclick="document.location.href='home.html'">
+            <div class="name" >박</div>
+            <div class="name_explain">밀양 박<br>About me</div>
+           </div>
+           <div class="d" onmouseover="meanshow(1)" onmouseout="meangone(1)" onclick="document.location.href='works.html'">
+            <div class="name">시</div>
+            <div class="name_explain">베풀 시<br>Works</div>
+           </div>
+           <div class="d" onmouseover="meanshow(2)" onmouseout="meangone(2)" onclick="document.location.href='plan.html'">
+            <div class="name">현</div>
+            <div class="name_explain">밝을 현<br>Plan</div>
+           </div>
+    </nav>
+
+    <div class="content2">
+        <h3 class="contentTitles">목표 기업</h3><br>
+        <div class="backWhite">
+            <img src="drawable/kt-ci.png">
+        </div>
+        <p style="font-size: 30px;">KT(주식회사 케이티, KT Corporation)</p>
+        <p>국내 최대 통신사이자 디지털 플랫폼 기업으로 ICT, 금융사업, 위성방송서비스사업, 기타사업(콘텐츠, 부동산, 커머스 등) 등을 영위하고 있다. 무선통신, 초고속인터넷, IPTV 등 핵심사업에서의 지속적인 성장뿐만 아니라 IDC, 클라우드, AI/DX 등 B2B 성장사업에서도 성과를 창출하였다. </p>
+
+        <br>
+        <p id="ktDetail">선정 이유<br><br>
+            작년 ALIVE school 프로그램 설명회를 들은 후 관심이 생겼다.<br>
+            이후 이러한 교육 과정을 거쳐 KT에 입사한 선배님을 만나뵈며, <br>
+            데이터 분석에 관심있고, 많은 계획서를 써 본 경험이 있는 나로서<br>
+            적성이 잘 맞을 것 같다는 생각이 들어 선정하게 되었다.
+        </p>
+    </div>
+
+    <div class="content2">
+        <h3 class="contentTitles">DX(Digital Transformation)란?</h3>
+        <p>사물인터넷(IoT), 클라우드(Cloud), 인공지능(AI), 빅데이터(Big Data)를 통해 ‘디지털화’가 한 단계 더 도약한 것을 의미한다. 기업의 내부 전략이나 조직 구조부터 프로세스, 비즈니스 모델, 시스템 등 전반적인 운영에서의 영역이 ‘디지털화’된다는 뜻이다.</p>
+
+        <div class="div_exp" onmouseover="showEx(0)" onmouseout="goneEx()"><p>IoT</p></div>
+        <div class="div_exp" onmouseover="showEx(1)" onmouseout="goneEx()"><p>Cloud</p></div>
+        <div class="div_exp" onmouseover="showEx(2)" onmouseout="goneEx()"><p>AI</p></div>
+        <div class="div_exp" onmouseover="showEx(3)" onmouseout="goneEx()"><p>Big Data</p></div>
+        <div id="abcExplain"><p><br><br></p></div>
+
+    </div>
+    <div class="content2">
+        <h3 class="contentTitles">DX 컨설턴트 Track</h3>
+        <p>AI기반 데이터 분석 역량을 활용, 기업의 다양한 영역에서 DX를 주도하는 <em>디지털 전환 촉진자</em>가 될 수 있습니다.</p>
+        <div class="backWhite">
+            <img src="drawable/track_dx.jpg" width="90%">
+            <img src="drawable/dx_able_work.png" width="90%">
+        </div>
+        
+    </div>
+    <div class="content2">
+        <h3 class="contentTitles">KT AIVLE School</h3>
+        
+        <img src="drawable/AIVLESchool.png">
+
+        <p>AIVLE School(에이블스쿨)은 KT의 ‘AI 인재 양성 경험과 노하우’를 내부에서 외부로 확장하여, 고용노동부 K-Digital Training과 함께 대한민국 청년들을 ‘기업 실무형 AI/DX인재’로 양성하고, 일자리 창출에 기여하는 교육 프로그램</p>
+        <p><span class="ex"><a href="https://aivle.kt.co.kr/home/main/indexMain" style="font-size: 15px;" >출처: AIVLE School 홈페이지</a></span></p>
+        <img src="drawable/aivle5.png">
+        <p>현재 5기까지 교육 완료<br>
+            2025년 말, 7기 지원 예정
+        </p>
+        <p>지원 자격<br>
+            정규 4년제 대학(학사 이상) 졸업자 및 졸업 예정자<br>
+            <br>우대사항<br>
+            AICE 자격증 보유자 서류 우대<br>
+            AICE Associate 이상 코딩 테스트 면제<br>
+            타 SW 인재양성 프로그램 수료자 서류 우대<br>
+        </p>
+    </div>
+    
+    <div class="content2">
+        <h3 class="contentTitles">계획</h3>
+        <table>
+            <tbody>
+                <tr>
+                    <td rowspan="3" >2024 여름 방학</td>
+                    <td class="tdN">토익 공부 700점 이상 목표</td>
+                    <td><select size="1">
+                        <option value="1" selected>진행 예정</option>
+                        <option value="2">진행 중</option>
+                        <option value="3">진행 완료</option>                        
+                    </select></td>
+                </tr>
+                               
+                <tr>
+                    <td class="tdN">코딩 테스트 위한 파이썬 공부</td>
+                    <td><select size="1">
+                        <option value="1" selected>진행 예정</option>
+                        <option value="2">진행 중</option>
+                        <option value="3">진행 완료</option>                        
+                    </select></td>
+                </tr>
+                <tr>
+                    <td class="tdN">고용노동부 공공데이터 공모전 참여</td>
+                    <td><select size="1">
+                        <option value="1" >진행 예정</option>
+                        <option value="2" selected>진행 중</option>
+                        <option value="3">진행 완료</option>                        
+                    </select></td>
+                </tr>
+                <tr>
+                    <td rowspan="3" >2024 2학기</td>
+                    <td class="tdN">데이스베이스 실습 프로젝트</td>
+                    <td><select size="1">
+                        <option value="1" selected>진행 예정</option>
+                        <option value="2">진행 중</option>
+                        <option value="3">진행 완료</option>                        
+                    </select></td>
+                </tr>
+                <tr>
+                    <td class="tdN">창업 동아리 아이템 개발</td>
+                    <td><select size="1">
+                        <option value="1" selected>진행 예정</option>
+                        <option value="2">진행 중</option>
+                        <option value="3">진행 완료</option>                        
+                    </select></td>
+                </tr>
+                <tr>
+                    <td class="tdN">배워보고 싶은 거 공부하기(미정)</td>
+                    <td><select size="1">
+                        <option value="1" selected>진행 예정</option>
+                        <option value="2" >진행 중</option>
+                        <option value="3">진행 완료</option>                        
+                    </select></td>
+                </tr>
+                <tr>
+                    <td rowspan="3" >2024 겨울 방학</td>
+                    <td class="tdN">데이스베이스 실습 프로젝트</td>
+                    <td><select size="1">
+                        <option value="1" selected>진행 예정</option>
+                        <option value="2">진행 중</option>
+                        <option value="3">진행 완료</option>                        
+                    </select></td>
+                </tr>
+                <tr>
+                    <td class="tdN">창업 동아리 아이템 개발</td>
+                    <td><select size="1">
+                        <option value="1" selected>진행 예정</option>
+                        <option value="2">진행 중</option>
+                        <option value="3">진행 완료</option>                        
+                    </select></td>
+                </tr>
+                <tr>
+                    <td class="tdN">배워보고 싶은 거 공부하기(미정)</td>
+                    <td><select size="1">
+                        <option value="1" selected>진행 예정</option>
+                        <option value="2" >진행 중</option>
+                        <option value="3">진행 완료</option>                        
+                    </select></td>
+                </tr>
+                <tr>
+                    <td rowspan="3" >2025</td>
+                    <td class="tdN">정보처리기사 자격증 취득</td>
+                    <td><select size="1">
+                        <option value="1" selected>진행 예정</option>
+                        <option value="2">진행 중</option>
+                        <option value="3">진행 완료</option>                        
+                    </select></td>
+                </tr>
+                <tr>
+                    <td class="tdN">AICE 자격증 취득</td>
+                    <td><select size="1">
+                        <option value="1" selected>진행 예정</option>
+                        <option value="2">진행 중</option>
+                        <option value="3">진행 완료</option>                        
+                    </select></td>
+                </tr>
+                <tr>
+                    <td class="tdN">SQLD 취득</td>
+                    <td><select size="1">
+                        <option value="1" selected>진행 예정</option>
+                        <option value="2" >진행 중</option>
+                        <option value="3">진행 완료</option>                        
+                    </select></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>2025년 말 AIVLE School 지원 예정<br>
+            예상일 25.12.18        </p>
+        <p id="DDay" style="font-size: 30px;"></p>
+
+    </div>
+   
+</body>
+</html>
